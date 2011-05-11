@@ -18,12 +18,16 @@ class Module::DependecyTree {
     use Moose::Util::TypeConstraints;
     use Parse::CPAN::Packages::Fast;
 
+    # public attr
+
     has qw(cpandeps_url     is ro isa Str),
       default => 'http://deps.cpantesters.org/';
     has qw(module           is ro isa Str required 1);
     has qw(os               is ro isa Str default Linux);
     has qw(packages_details is ro isa Str required 1);
     has qw(perl_version     is ro isa Str), default => $Config::Config{version};
+
+    # private attr
 
     has qw(_deps_of         is rw isa HashRef[ArrayRef]),
       default => sub { {} };
