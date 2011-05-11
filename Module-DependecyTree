@@ -37,11 +37,11 @@ class Module::DependecyTree {
     }
 
     method build_url() {
-        join '', $self->cpandeps_url, '?',
-          'xml=1',
+        join '', $self->cpandeps_url,
+          '?xml=1',
           ';module=', $self->module,
-          ';perl=', $self->perl_version,
-          ';os=', $self->os,
+          ';perl=',   $self->perl_version,
+          ';os=',     $self->os,
           ';pureperl=0';
     }
 
