@@ -13,14 +13,28 @@ use MooseX::Declare;
 ################################################################################
 class Module::DependecyTree {
     use Config ();
-    has qw(module       is rw isa Str required 1);
-    has qw(os           is rw isa Str default Linux);
-    has qw(perl_version is rw isa Str), default => $Config::Config{version};
-    has qw(cpandeps_url is ro isa Str),
+    use File::Spec ();
+    use Module::Extract::VERSION;
+    use Moose::Util::TypeConstraints;
+    use Parse::CPAN::Packages::Fast;
+
+    has qw(cpandeps_url    is ro isa Str),
       default => 'http://deps.cpantesters.org/';
+    has qw(module          is rw isa Str required 1);
+    has qw(os              is rw isa Str default Linux);
+    has qw(package_details is ro isa Str required 1);
+    has qw(perl_version    is rw isa Str), default => $Config::Config{version};
 
     has qw(_deps_of is rw isa HashRef[ArrayRef]),
       default => sub { {} };
+    has qw(_packages_parser is rw);
+
+    method BUILD {
+        my $pp = Parse::CPAN::Packages::Fast->new(
+            $self->package_details
+        );
+        $self->_packages_parser($pp);
+    }
 
     method build_url() {
         join '', $self->cpandeps_url, '?',
@@ -70,6 +84,23 @@ class Module::DependecyTree {
             }
         }
         return \%deps_of;
+    }
+
+    method get_cpan_version(Str $mod) {
+        my $parser = $self->_packages_parser;
+        return $parser->package($mod)->version;
+    }
+
+    method get_installed_version(Str $mod) {
+        my $file .= "$mod.pm";
+        $file =~ s{::}{/}g;
+
+        for (@INC) {
+            my $path = File::Spec->catfile($_, $file);
+            return scalar Module::Extract::VERSION->parse_version_safely($path)
+              if -e $path;
+        }
+        return;
     }
 
     method install() {
@@ -436,7 +467,12 @@ EOXML
     }
 };
 ################################################################################
-my $tree = Module::DependecyTree->new( module => 'Moose' );
+my $tree = Module::DependecyTree->new(
+    module          => 'Moose',
+    package_details => '/mirrors/cpan/modules/02packages.details.txt.gz'
+);
+dd $tree->get_installed_version("Moose");
+dd $tree->get_cpan_version("Moose");
 $tree->parse;
 say "===";
 $tree->install;
