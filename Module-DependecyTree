@@ -13,13 +13,23 @@ use MooseX::Declare;
 ################################################################################
 class Module::DependecyTree {
     use Config ();
-
     has qw(module       is rw isa Str required 1);
     has qw(os           is rw isa Str default Linux);
     has qw(perl_version is rw isa Str), default => $Config::Config{version};
+    has qw(cpandeps_url is ro isa Str),
+      default => 'http://deps.cpantesters.org/';
 
     has qw(_deps_of is rw isa HashRef[ArrayRef]),
       default => sub { {} };
+
+    method build_url() {
+        join '', $self->cpandeps_url, '?',
+          'xml=1',
+          ';module=', $self->module,
+          ';perl=', $self->perl_version,
+          ';os=', $self->os,
+          ';pureperl=0';
+    }
 
     method parse() {
         my $xml = $self->get_xml();
@@ -38,9 +48,8 @@ class Module::DependecyTree {
             my ($is_core) = /<textresult>(.*?)</;
 
             next if $is_core;
-            say
-              "  " x $depth,
-                "$mod ($depth)";
+
+            say "  " x $depth, "$mod ($depth)";
             push @mods, [ $mod, $depth ];
         }
         return \@mods;
@@ -49,12 +58,12 @@ class Module::DependecyTree {
     method get_deps_of(ArrayRef[ArrayRef] $mods) {
         my %deps_of;
         for my $i (0..$#$mods) {
-            my ($mother, $depth) = @{$mods->[$i]};
-            $deps_of{$mother} = [];
+            my ($parent, $depth) = @{$mods->[$i]};
+            $deps_of{$parent} = [];
 
             for my $j ($i+1..$#$mods) {
                 my ($m, $d) = @{$mods->[$j]};
-                push @{$deps_of{$mother}}, $m
+                push @{$deps_of{$parent}}, $m
                   if $d == $depth + 1;
                 last
                   if $d <= $depth;
@@ -67,16 +76,16 @@ class Module::DependecyTree {
         $self->install_($self->module, '', $self->_deps_of);
     }
 
-    method install_($mod, $parent, $tree) {
+    method install_(Str $mod, Str $parent, HashRef[ArrayRef] $tree) {
         $self->install_($_, $mod, $tree)
           for @{$tree->{$mod}};
         say "Installing $mod", $parent ? " (prereq of $parent)" : '';
     }
 
-    method print_tree($parent, $tree, $depth = 0) {
+    method print_tree($parent, $depth = 0) {
         say '  ' x $depth, "$parent ($depth)";
-        print_tree($_, $tree, $depth+1)
-          for @{$tree->{$parent}};
+        print_tree($_, $self->_deps_of, $depth+1)
+          for @{$self->_deps_of->{$parent}};
     }
 
     method get_xml() {
