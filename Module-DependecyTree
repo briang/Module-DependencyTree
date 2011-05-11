@@ -18,7 +18,7 @@ class Module::DependecyTree {
     has qw(os           is rw isa Str default Linux);
     has qw(perl_version is rw isa Str), default => $Config::Config{version};
 
-    has qw(_deps_of is rw isa HashRef),
+    has qw(_deps_of is rw isa HashRef[ArrayRef]),
       default => sub { {} };
 
     method parse() {
@@ -26,11 +26,11 @@ class Module::DependecyTree {
         my @dependencies = split /\s*<dependency>.*?\n/, $xml;
         shift @dependencies;
 
-        my @mods    = $self->get_mods(@dependencies);
-        $self->_deps_of($self->get_deps_of(@mods));
+        my $mods = $self->get_mods(@dependencies);
+        $self->_deps_of($self->get_deps_of($mods));
     }
 
-    method get_mods(@dependencies) {
+    method get_mods(Str @dependencies) {
         my @mods;
         for (@dependencies) {
             my ($mod)     = /<module>(.*?)</;
@@ -43,17 +43,17 @@ class Module::DependecyTree {
                 "$mod ($depth)";
             push @mods, [ $mod, $depth ];
         }
-        return @mods;
+        return \@mods;
     }
 
-    method get_deps_of(@mods) {
+    method get_deps_of(ArrayRef[ArrayRef] $mods) {
         my %deps_of;
-        for my $i (0..$#mods) {
-            my ($mother, $depth) = @{$mods[$i]};
+        for my $i (0..$#$mods) {
+            my ($mother, $depth) = @{$mods->[$i]};
             $deps_of{$mother} = [];
 
-            for my $j ($i+1..$#mods) {
-                my ($m, $d) = @{$mods[$j]};
+            for my $j ($i+1..$#$mods) {
+                my ($m, $d) = @{$mods->[$j]};
                 push @{$deps_of{$mother}}, $m
                   if $d == $depth + 1;
                 last
@@ -429,4 +429,5 @@ EOXML
 ################################################################################
 my $tree = Module::DependecyTree->new( module => 'Moose' );
 $tree->parse;
+say "===";
 $tree->install;
