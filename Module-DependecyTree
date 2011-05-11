@@ -20,10 +20,10 @@ class Module::DependecyTree {
 
     has qw(cpandeps_url     is ro isa Str),
       default => 'http://deps.cpantesters.org/';
-    has qw(module           is rw isa Str required 1);
-    has qw(os               is rw isa Str default Linux);
+    has qw(module           is ro isa Str required 1);
+    has qw(os               is ro isa Str default Linux);
     has qw(packages_details is ro isa Str required 1);
-    has qw(perl_version     is rw isa Str), default => $Config::Config{version};
+    has qw(perl_version     is ro isa Str), default => $Config::Config{version};
 
     has qw(_deps_of         is rw isa HashRef[ArrayRef]),
       default => sub { {} };
