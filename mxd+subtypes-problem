@@ -14,11 +14,11 @@ use MooseX::Declare;
 class Foo {
     use Moose::Util::TypeConstraints;
 
-    subtype PosInt => as Int => where { $_ > 0 };
+    BEGIN { subtype PosInt => as Int => where { $_ > 0 } }
 
     has qw(foo is rw isa PosInt);
 
-    method bar(PosInt $x) { $x+1 } # <-------------------------------- dies here
+    method bar(PosInt $x) { $x+1 }
 };
 ################################################################################
 use Test::Most;
