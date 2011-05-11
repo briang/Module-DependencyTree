@@ -18,20 +18,20 @@ class Module::DependecyTree {
     use Moose::Util::TypeConstraints;
     use Parse::CPAN::Packages::Fast;
 
-    has qw(cpandeps_url    is ro isa Str),
+    has qw(cpandeps_url     is ro isa Str),
       default => 'http://deps.cpantesters.org/';
-    has qw(module          is rw isa Str required 1);
-    has qw(os              is rw isa Str default Linux);
-    has qw(package_details is ro isa Str required 1);
-    has qw(perl_version    is rw isa Str), default => $Config::Config{version};
+    has qw(module           is rw isa Str required 1);
+    has qw(os               is rw isa Str default Linux);
+    has qw(packages_details is ro isa Str required 1);
+    has qw(perl_version     is rw isa Str), default => $Config::Config{version};
 
-    has qw(_deps_of is rw isa HashRef[ArrayRef]),
+    has qw(_deps_of         is rw isa HashRef[ArrayRef]),
       default => sub { {} };
     has qw(_packages_parser is rw);
 
     method BUILD {
         my $pp = Parse::CPAN::Packages::Fast->new(
-            $self->package_details
+            $self->packages_details
         );
         $self->_packages_parser($pp);
     }
@@ -468,8 +468,8 @@ EOXML
 };
 ################################################################################
 my $tree = Module::DependecyTree->new(
-    module          => 'Moose',
-    package_details => '/mirrors/cpan/modules/02packages.details.txt.gz'
+    module           => 'Moose',
+    packages_details => '/mirrors/cpan/modules/02packages.details.txt.gz'
 );
 dd $tree->get_installed_version("Moose");
 dd $tree->get_cpan_version("Moose");
