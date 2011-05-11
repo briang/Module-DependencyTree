@@ -11,6 +11,26 @@ $|=1;
 
 use MooseX::Declare;
 ################################################################################
+class Module::DependecyTree::Module {
+    use Moose::Util::TypeConstraints;
+    use version;
+
+    coerce 'version'
+      => from 'Str'
+        => via { version->parse($_) };
+
+    has qw(cpan_version      is ro isa version required 1);
+    has qw(excuse            is ro isa Str), writer => '_set_excuse';
+    has qw(installed_version is ro isa version required 1);
+    has qw(is_installed      is ro isa Str), writer => '_set_is_installed';
+    has qw(name              is ro isa Str required 1);
+
+    method is_newer_on_cpan() {
+        return 1 unless $self->is_installed;
+        return $self->cpan_version > $self->installed_version;
+    }
+};
+
 class Module::DependecyTree {
     use Config ();
     use File::Spec ();
