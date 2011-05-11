@@ -1,0 +1,34 @@
+#!/usr/local/bin/perl
+
+use 5.010;
+
+use strict;
+use warnings FATAL => 'all';
+
+use Data::Dump
+
+$|=1;
+
+use MooseX::Declare;
+################################################################################
+class Foo {
+    use Moose::Util::TypeConstraints;
+
+    subtype PosInt => as Int => where { $_ > 0 };
+
+    has qw(foo is rw isa PosInt);
+
+    method bar(PosInt $x) { $x+1 } # <-------------------------------- dies here
+};
+################################################################################
+use Test::Most;
+
+lives_ok { Foo->new(foo => 2) } "lives";
+dies_ok  { Foo->new(foo => 0) } "dies";
+
+lives_ok {
+    my $foo = Foo->new(foo => 2);
+    $foo->bar(5);
+} "method call";
+
+done_testing;
