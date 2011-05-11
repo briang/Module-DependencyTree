@@ -1,0 +1,27 @@
+#!/usr/local/bin/perl
+
+use 5.010;
+
+use strict;
+use warnings FATAL => 'all';
+
+use Data::Dump;
+
+use version; dd "sure looks like a version", version->parse(1.30);
+
+$|=1;
+################################################################################
+package Foo;
+use Moose;
+use Moose::Util::TypeConstraints;
+use version;
+
+coerce 'version' => from 'Str' => via { version->parse($_) }; # <----- dies here
+
+has qw(bar is rw isa version coerce 1);
+
+no Moose;
+
+package main;
+
+my $foo = Foo->new(bar => 1.30);
