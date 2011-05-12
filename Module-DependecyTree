@@ -1,6 +1,6 @@
 #!/usr/local/bin/perl
 
-use 5.010;
+use 5.012;
 
 use strict;
 use warnings FATAL => 'all';
@@ -23,11 +23,12 @@ class Module::DependecyTree::Module {
     has qw(cpan_version      is ro isa version coerce 1 required 1);
     has qw(excuse            is ro isa Str), writer => '_set_excuse';
     has qw(installed_version is ro isa version|Undef coerce 1 required 1);
-    has qw(is_installed      is ro isa Str), writer => '_set_is_installed';
+    has qw(is_installed      is ro isa Str);
     has qw(name              is ro isa Str required 1);
+    has qw(required_for      is ro isa Str required 1);
 
-    method is_newer_on_cpan() {
-       #return 1 unless $self->is_installed; # XXX I don't think I want this?
+    method needs_to_be_installed() {
+        return 1 unless $self->is_installed;
         return $self->cpan_version > $self->installed_version;
     }
 };
@@ -110,6 +111,7 @@ class Module::DependecyTree {
                         installed_version => $self->get_installed_version($m),
                         is_installed      => !! $self->find_location_of($m),
                         excuse            => 'XXX',
+                        required_for      => $parent,
                     );
                     #$mdm->make_excuse;
                     push @{$deps_of{$parent}}, $mdm;
