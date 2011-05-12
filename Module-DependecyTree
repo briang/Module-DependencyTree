@@ -117,12 +117,19 @@ class Module::DependecyTree {
     }
 
     method get_installed_version(Str $mod) {
+        my $path = $self->find_location_of($mod);
+        return $path
+               ? scalar Module::Extract::VERSION->parse_version_safely($path)
+               : undef;
+    }
+
+    method find_location_of(Str $mod) {
         my $file .= "$mod.pm";
         $file =~ s{::}{/}g;
 
         for (@INC) {
             my $path = File::Spec->catfile($_, $file);
-            return scalar Module::Extract::VERSION->parse_version_safely($path)
+            return $path
               if -e $path;
         }
         return;
