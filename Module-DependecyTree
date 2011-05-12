@@ -49,7 +49,7 @@ class Module::DependecyTree {
 
     # private attr
 
-    has qw(_deps_of         is rw isa HashRef[ArrayRef]),
+    has qw(_dependencies    is rw isa HashRef[ArrayRef]),
       default => sub { {} };
     has qw(_packages_parser is rw);
 
@@ -60,7 +60,7 @@ class Module::DependecyTree {
         $self->_packages_parser($pp);
     }
 
-    method build_url() {
+    method build_cpandeps_url() {
         join '', $self->cpandeps_url,
           '?xml=1',
           ';module=', $self->module,
@@ -74,11 +74,11 @@ class Module::DependecyTree {
         my @dependencies = split /\s*<dependency>.*?\n/, $xml;
         shift @dependencies;
 
-        my $mods = $self->get_mods(@dependencies);
-        $self->_deps_of($self->get_deps_of($mods));
+        my $mods = $self->get_modules(@dependencies);
+        $self->_dependencies($self->get_dependencies_of($mods));
     }
 
-    method get_mods(Str @dependencies) {
+    method get_modules(Str @dependencies) {
         my @mods;
         for (@dependencies) {
             my ($mod)     = /<module>(.*?)</;
@@ -93,7 +93,7 @@ class Module::DependecyTree {
         return \@mods;
     }
 
-    method get_deps_of(ArrayRef[ArrayRef] $mods) {
+    method get_dependencies_of(ArrayRef[ArrayRef] $mods) {
         my %deps_of;
         for my $i (0..$#$mods) {
             my ($parent, $depth) = @{$mods->[$i]};
@@ -128,7 +128,7 @@ class Module::DependecyTree {
     }
 
     method install() {
-        $self->install_($self->module, '', $self->_deps_of);
+        $self->install_($self->module, '', $self->_dependencies);
     }
 
     method install_(Str $mod, Str $parent, HashRef[ArrayRef] $tree) {
@@ -137,10 +137,10 @@ class Module::DependecyTree {
         say "Installing $mod", $parent ? " (prereq of $parent)" : '';
     }
 
-    method print_tree($parent, $depth = 0) {
+    method print_tree(Str $parent, Int $depth = 0) {
         say '  ' x $depth, "$parent ($depth)";
-        print_tree($_, $self->_deps_of, $depth+1)
-          for @{$self->_deps_of->{$parent}};
+        $self->print_tree($_, $depth+1)
+          for @{$self->_dependencies->{$parent}};
     }
 
     method get_xml() {
