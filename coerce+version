@@ -16,6 +16,8 @@ use Moose;
 use Moose::Util::TypeConstraints;
 use version;
 
+class_type('version');
+
 coerce 'version' => from 'Str' => via { version->parse($_) }; # <----- dies here
 
 has qw(bar is rw isa version coerce 1);
