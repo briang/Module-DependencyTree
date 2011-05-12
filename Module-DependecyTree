@@ -22,7 +22,7 @@ class Module::DependecyTree::Module {
 
     has qw(cpan_version      is ro isa version coerce 1 required 1);
     has qw(excuse            is ro isa Str), writer => '_set_excuse';
-    has qw(installed_version is ro isa version coerce 1 required 1);
+    has qw(installed_version is ro isa version|Undef coerce 1 required 1);
     has qw(is_installed      is ro isa Str), writer => '_set_is_installed';
     has qw(name              is ro isa Str required 1);
 
@@ -50,7 +50,8 @@ class Module::DependecyTree {
 
     # private attr
 
-    has qw(_dependencies    is rw isa HashRef[ArrayRef]),
+   #has qw(_dependencies    is rw isa HashRef[Module::DependecyTree::Module]), # XXX
+    has qw(_dependencies    is rw isa HashRef),
       default => sub { {} };
     has qw(_packages_parser is rw);
 
@@ -102,8 +103,17 @@ class Module::DependecyTree {
 
             for my $j ($i+1..$#$mods) {
                 my ($m, $d) = @{$mods->[$j]};
-                push @{$deps_of{$parent}}, $m
-                  if $d == $depth + 1;
+                if ($d == $depth + 1) {
+                    my $mdm = Module::DependecyTree::Module->new(
+                        name              => $m,
+                        cpan_version      => $self->get_cpan_version($m),
+                        installed_version => $self->get_installed_version($m),
+                        is_installed      => !! $self->find_location_of($m),
+                        excuse            => 'XXX',
+                    );
+                    #$mdm->make_excuse;
+                    push @{$deps_of{$parent}}, $mdm;
+                }
                 last
                   if $d <= $depth;
             }
@@ -140,7 +150,7 @@ class Module::DependecyTree {
     }
 
     method install_(Str $mod, Str $parent, HashRef[ArrayRef] $tree) {
-        $self->install_($_, $mod, $tree)
+        $self->install_($_->name, $mod, $tree)
           for @{$tree->{$mod}};
         say "Installing $mod", $parent ? " (prereq of $parent)" : '';
     }
