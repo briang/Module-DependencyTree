@@ -15,13 +15,14 @@ class Module::DependecyTree::Module {
     use Moose::Util::TypeConstraints;
     use version;
 
-    # coerce 'version'
-    #   => from 'Str'
-    #     => via { version->parse($_) };
+    class_type 'version';
+    coerce 'version'
+      => from 'Str'
+        => via { version->parse($_) };
 
-    has qw(cpan_version      is ro isa version required 1);
+    has qw(cpan_version      is ro isa version coerce 1 required 1);
     has qw(excuse            is ro isa Str), writer => '_set_excuse';
-    has qw(installed_version is ro isa version required 1);
+    has qw(installed_version is ro isa version coerce 1 required 1);
     has qw(is_installed      is ro isa Str), writer => '_set_is_installed';
     has qw(name              is ro isa Str required 1);
 
@@ -495,8 +496,6 @@ my $tree = Module::DependecyTree->new(
     module           => 'Moose',
     packages_details => '/mirrors/cpan/modules/02packages.details.txt.gz'
 );
-dd $tree->get_installed_version("Moose");
-dd $tree->get_cpan_version("Moose");
 $tree->parse;
 say "===";
 $tree->install;
