@@ -12,6 +12,7 @@ $|=1;
 use MooseX::Declare;
 ################################################################################
 class Module::DependecyTree::Module {
+    use Module::CoreList ();
     use Moose::Util::TypeConstraints;
     use version;
 
@@ -25,11 +26,30 @@ class Module::DependecyTree::Module {
     has qw(installed_version is ro isa version|Undef coerce 1 required 1);
     has qw(is_installed      is ro isa Str);
     has qw(name              is ro isa Str required 1);
-    has qw(required_for      is ro isa Str required 1);
+   #has qw(required_for      is ro isa Str required 1);
+
+    method is_core() {
+        return !! $Module::CoreList::version{$]}{$self->name};
+    }
 
     method needs_to_be_installed() {
         return 1 unless $self->is_installed;
         return $self->cpan_version > $self->installed_version;
+    }
+
+    method make_excuse(Module::DependecyTree::Module $parent?) {
+        my $u_or_i  = $self->is_installed ? "Upgrade" : "Install";
+        my $ver_str = $self->is_installed
+                      ? sprintf("%s-->%s", $self->installed_version, $self->cpan_version)
+                      : sprintf("%s",      $self->cpan_version);
+        my $prereq  = $parent
+                      ? sprintf " (prereq of %s %s)", $parent->name, $parent->cpan_version
+                      : '';
+
+        my $excuse = sprintf "%s %s (%s)%s",
+          $u_or_i, $self->name, $ver_str, $prereq;
+
+        $self->_set_excuse($excuse);
     }
 };
 
@@ -51,8 +71,9 @@ class Module::DependecyTree {
 
     # private attr
 
-   #has qw(_dependencies    is rw isa HashRef[Module::DependecyTree::Module]), # XXX
-    has qw(_dependencies    is rw isa HashRef),
+    has qw(_dependencies    is rw isa HashRef[ArrayRef]),
+      default => sub { {} };
+    has qw(_modules    is rw isa HashRef[Module::DependecyTree::Module]),
       default => sub { {} };
     has qw(_packages_parser is rw);
 
@@ -92,11 +113,21 @@ class Module::DependecyTree {
 
             say "  " x $depth, "$mod ($depth)";
             push @mods, [ $mod, $depth ];
+
+            my $mdm = Module::DependecyTree::Module->new(
+                name              => $mod,
+                cpan_version      => $self->get_cpan_version($mod),
+                installed_version => $self->get_installed_version($mod),
+                is_installed      => !! $self->find_location_of($mod),
+            );
+            $self->_modules->{$mod} = $mdm;
         }
         return \@mods;
     }
 
     method get_dependencies_of(ArrayRef[ArrayRef] $mods) {
+        $self->_modules->{$mods->[0][0]}->make_excuse;
+
         my %deps_of;
         for my $i (0..$#$mods) {
             my ($parent, $depth) = @{$mods->[$i]};
@@ -105,15 +136,8 @@ class Module::DependecyTree {
             for my $j ($i+1..$#$mods) {
                 my ($m, $d) = @{$mods->[$j]};
                 if ($d == $depth + 1) {
-                    my $mdm = Module::DependecyTree::Module->new(
-                        name              => $m,
-                        cpan_version      => $self->get_cpan_version($m),
-                        installed_version => $self->get_installed_version($m),
-                        is_installed      => !! $self->find_location_of($m),
-                        excuse            => 'XXX',
-                        required_for      => $parent,
-                    );
-                    #$mdm->make_excuse;
+                    my $mdm = $self->_modules->{$m};
+                    $mdm->make_excuse($self->_modules->{$parent});
                     push @{$deps_of{$parent}}, $mdm;
                 }
                 last
@@ -154,7 +178,8 @@ class Module::DependecyTree {
     method install_(Str $mod, Str $parent, HashRef[ArrayRef] $tree) {
         $self->install_($_->name, $mod, $tree)
           for @{$tree->{$mod}};
-        say "Installing $mod", $parent ? " (prereq of $parent)" : '';
+        say $self->_modules->{$mod}->excuse;
+        #"Installing $mod", $parent ? " (prereq of $parent)" : '';
     }
 
     method print_tree(Str $parent, Int $depth = 0) {
