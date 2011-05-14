@@ -38,18 +38,26 @@ class Module::DependecyTree::Module {
     }
 
     method make_excuse(Module::DependecyTree::Module $parent?) {
-        my $u_or_i  = $self->is_installed ? "Upgrade" : "Install";
-        my $ver_str = $self->is_installed
-                      ? sprintf("%s-->%s", $self->installed_version, $self->cpan_version)
-                      : sprintf("%s",      $self->cpan_version);
-        my $prereq  = $parent
-                      ? sprintf " (prereq of %s %s)", $parent->name, $parent->cpan_version
-                      : '';
+        if ($self->needs_to_be_installed) {
+            my $u_or_i  = $self->is_installed ? "Upgrade" : "Install";
+            my $ver_str = $self->is_installed
+                          ? sprintf("%s-->%s", $self->installed_version, $self->cpan_version)
+                          : sprintf("%s",      $self->cpan_version);
+            my $prereq  = $parent
+                          ? sprintf " (prereq of %s %s)", $parent->name, $parent->cpan_version
+                          : '';
 
-        my $excuse = sprintf "%s %s (%s)%s",
-          $u_or_i, $self->name, $ver_str, $prereq;
+            my $excuse = sprintf "%s %s (%s)%s",
+              $u_or_i, $self->name, $ver_str, $prereq;
 
-        $self->_set_excuse($excuse);
+            $self->_set_excuse($excuse);
+        }
+        else {
+            $self->_set_excuse(
+                sprintf "%s (%s) is up to date",
+                  $self->name, $self->installed_version
+            )
+        }
     }
 };
 
