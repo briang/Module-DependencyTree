@@ -64,6 +64,7 @@ class Module::DependecyTree::Module {
 class Module::DependecyTree {
     use Config ();
     use File::Spec ();
+    use LWP::Simple ();
     use Module::Extract::VERSION;
     use Moose::Util::TypeConstraints;
     use Parse::CPAN::Packages::Fast;
@@ -197,17 +198,36 @@ class Module::DependecyTree {
     }
 
     method get_xml() {
-        my $file = $self->module . ".xml";
-        open my $XML, "<", $file
-          or die "can't open $file for reading: $!";
+        my $module = $self->module;
+        my $file   = "$module.xml";
+        $file =~ s/::/-/g;
+        return $self->get_xml_from($file)
+          if -e $file;
+
+        my $url = $self->build_cpandeps_url;
+        my $xml = LWP::Simple::get($url)
+          or die "can't fetch $url";
+
+        open my $XML, ">", $file
+          or die "can't open $file for writing: $!";
+
+        print $XML $xml;
+
+        return $xml;
+    }
+
+    method get_xml_from(Str $filename) {
+        open my $XML, "<", $filename
+          or die "can't open $filename for reading: $!";
 
         my $xml = do { local $/; <$XML> };
+
         return $xml;
     }
 };
 ################################################################################
 my $tree = Module::DependecyTree->new(
-    module           => 'Catalyst',
+    module           => 'POE',
     packages_details => '/mirrors/cpan/modules/02packages.details.txt.gz'
 );
 $tree->parse;
