@@ -1,0 +1,2160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cpandeps>
+  <module>Dist::Zilla</module>
+  <perl>5.12.3</perl>
+  <os>Linux</os>
+
+  <dependency>
+    <module>Dist::Zilla</module>
+    <depth>0</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>14</totalresults>
+    <passes>14</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Perl::PrereqScanner</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>35</totalresults>
+    <passes>35</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>PPI</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>28</totalresults>
+    <passes>28</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>File::Remove</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>22</totalresults>
+    <passes>22</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Test::More</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>ExtUtils::MakeMaker</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>File::Spec</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>IO::String</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>33</totalresults>
+    <passes>33</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Test::Object</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>31</totalresults>
+    <passes>31</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Scalar::Util</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>overload</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Exporter</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Storable</module>
+    <depth>3</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Test::NoWarnings</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>23</totalresults>
+    <passes>23</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Test::Tester</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>16</totalresults>
+    <passes>16</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Params::Util</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>13</totalresults>
+    <passes>13</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>ExtUtils::CBuilder</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Clone</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>38</totalresults>
+    <passes>38</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Digest::MD5</module>
+    <depth>3</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Test::SubCalls</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>32</totalresults>
+    <passes>32</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Hook::LexWrap</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>33</totalresults>
+    <passes>32</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Class::Inspector</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>38</totalresults>
+    <passes>38</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Task::Weaken</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>31</totalresults>
+    <passes>31</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>List::MoreUtils</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>39</totalresults>
+    <passes>39</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>String::RewritePrefix</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>38</totalresults>
+    <passes>38</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Sub::Exporter</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>14</totalresults>
+    <passes>14</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Data::OptList</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>18</totalresults>
+    <passes>18</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Sub::Install</module>
+    <depth>5</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>16</totalresults>
+    <passes>16</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Moose</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>16</totalresults>
+    <passes>16</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Test::Requires</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>44</totalresults>
+    <passes>44</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Package::DeprecationManager</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>41</totalresults>
+    <passes>41</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Test::Fatal</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>16</totalresults>
+    <passes>16</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Try::Tiny</module>
+    <depth>5</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>38</totalresults>
+    <passes>38</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Package::Stash::XS</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>32</totalresults>
+    <passes>32</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>MRO::Compat</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>35</totalresults>
+    <passes>35</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Class::C3</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>31</totalresults>
+    <passes>31</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Algorithm::C3</module>
+    <depth>5</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>11</totalresults>
+    <passes>10</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Eval::Closure</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>16</totalresults>
+    <passes>16</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Package::Stash</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>35</totalresults>
+    <passes>34</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Dist::CheckConflicts</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>44</totalresults>
+    <passes>44</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Sub::Name</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>38</totalresults>
+    <passes>38</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Devel::GlobalDestruction</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>40</totalresults>
+    <passes>40</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Scope::Guard</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>41</totalresults>
+    <passes>41</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>namespace::autoclean</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>37</totalresults>
+    <passes>36</passes>
+    <fails>1</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>B::Hooks::EndOfScope</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>41</totalresults>
+    <passes>41</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Variable::Magic</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>37</totalresults>
+    <passes>37</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>base</module>
+    <depth>5</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>XSLoader</module>
+    <depth>5</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>namespace::clean</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>42</totalresults>
+    <passes>42</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>constant</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Sub::Identify</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>35</totalresults>
+    <passes>35</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Version::Requirements</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>43</totalresults>
+    <passes>43</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>version</module>
+    <depth>3</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>File::Temp</module>
+    <depth>2</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>File::Path</module>
+    <depth>1</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Test::Deep</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>32</totalresults>
+    <passes>32</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>MooseX::SetOnce</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>26</totalresults>
+    <passes>25</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>MooseX::LazyRequire</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>24</totalresults>
+    <passes>23</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>MooseX::Types::Moose</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>35</totalresults>
+    <passes>34</passes>
+    <fails>1</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Carp::Clan</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>42</totalresults>
+    <passes>42</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Test::Exception</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>20</totalresults>
+    <passes>20</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Test::Harness</module>
+    <depth>5</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Sub::Uplevel</module>
+    <depth>5</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>21</totalresults>
+    <passes>20</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Module::Build</module>
+    <depth>6</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>aliased</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>37</totalresults>
+    <passes>36</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>CPAN::Meta::Converter</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>42</totalresults>
+    <passes>40</passes>
+    <fails>0</fails>
+    <unknowns>2</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Parse::CPAN::Meta</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>33</totalresults>
+    <passes>33</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>CPAN::Meta::YAML</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>35</totalresults>
+    <passes>35</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>JSON::PP</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>26</totalresults>
+    <passes>26</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Data::Dumper</module>
+    <depth>2</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>IO::Dir</module>
+    <depth>2</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>File::pushd</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>13</totalresults>
+    <passes>13</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>File::HomeDir</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>21</totalresults>
+    <passes>21</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>File::Which</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>10</totalresults>
+    <passes>10</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Test::Script</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>8</totalresults>
+    <passes>8</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Probe::Perl</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>7</totalresults>
+    <passes>7</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Test</module>
+    <depth>5</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>IPC::Run3</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>14</totalresults>
+    <passes>14</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Time::HiRes</module>
+    <depth>5</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>blib</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Config::MVP::Reader</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>33</totalresults>
+    <passes>33</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Tie::IxHash</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>33</totalresults>
+    <passes>31</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>1</nas>
+  </dependency>
+
+  <dependency>
+    <module>MooseX::OneArgNew</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>32</totalresults>
+    <passes>32</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>MooseX::Role::Parameterized</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>17</totalresults>
+    <passes>17</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>StackTrace::Auto</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>33</totalresults>
+    <passes>33</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Devel::StackTrace</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>40</totalresults>
+    <passes>40</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Role::Identifiable::HasIdent</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>34</totalresults>
+    <passes>34</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Class::Load</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>38</totalresults>
+    <passes>38</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Role::HasMessage</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>32</totalresults>
+    <passes>32</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>String::Errf</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>32</totalresults>
+    <passes>32</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Time::Piece</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Date::Format</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>34</totalresults>
+    <passes>34</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>autodie</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>JSON</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>29</totalresults>
+    <passes>29</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>String::Formatter</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>39</totalresults>
+    <passes>39</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Module::Pluggable::Object</module>
+    <depth>2</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>MooseX::Types::Path::Class</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>37</totalresults>
+    <passes>37</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Path::Class</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>39</totalresults>
+    <passes>39</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Data::Section</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>14</totalresults>
+    <passes>14</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Log::Dispatchouli</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>26</totalresults>
+    <passes>25</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Log::Dispatch::Array</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>35</totalresults>
+    <passes>35</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Log::Dispatch::Output</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>28</totalresults>
+    <passes>27</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Sys::Syslog</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Params::Validate</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>16</totalresults>
+    <passes>16</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Attribute::Handlers</module>
+    <depth>5</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Sub::Exporter::GlobExporter</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>37</totalresults>
+    <passes>37</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>String::Flogger</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>36</totalresults>
+    <passes>36</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Perl::Version</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>27</totalresults>
+    <passes>27</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Pod::Usage</module>
+    <depth>2</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>File::Slurp</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>10</totalresults>
+    <passes>10</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Getopt::Long</module>
+    <depth>2</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>File::Find::Rule</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>28</totalresults>
+    <passes>28</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Text::Glob</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>27</totalresults>
+    <passes>27</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Number::Compare</module>
+    <depth>2</depth>
+    <warning>Couldn't get dependencies</warning>
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>27</totalresults>
+    <passes>27</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>YAML::Tiny</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>33</totalresults>
+    <passes>33</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>YAML</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>15</totalresults>
+    <passes>15</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Filter::Util::Call</module>
+    <depth>3</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>YAML::Perl</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>14</totalresults>
+    <passes>14</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Error</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>35</totalresults>
+    <passes>35</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>YAML::XS</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>24</totalresults>
+    <passes>23</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>YAML::Syck</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>26</totalresults>
+    <passes>26</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Term::UI</module>
+    <depth>1</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>CPAN::Uploader</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>24</totalresults>
+    <passes>23</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>HTTP::Status</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>19</totalresults>
+    <passes>19</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>IO::Uncompress::Inflate</module>
+    <depth>3</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>LWP::MediaTypes</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>24</totalresults>
+    <passes>24</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Encode::Locale</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>27</totalresults>
+    <passes>26</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Encode</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>URI</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>25</totalresults>
+    <passes>25</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>MIME::Base64</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>HTTP::Date</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>21</totalresults>
+    <passes>21</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Time::Local</module>
+    <depth>4</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Compress::Raw::Zlib</module>
+    <depth>3</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>HTML::Parser</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>28</totalresults>
+    <passes>28</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>HTML::Tagset</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>18</totalresults>
+    <passes>18</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Getopt::Long::Descriptive</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>17</totalresults>
+    <passes>17</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Term::ReadKey</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>24</totalresults>
+    <passes>24</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>LWP::UserAgent</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>35</totalresults>
+    <passes>33</passes>
+    <fails>0</fails>
+    <unknowns>2</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>File::Listing</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>20</totalresults>
+    <passes>20</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>HTTP::Negotiate</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>19</totalresults>
+    <passes>19</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>HTTP::Daemon</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>23</totalresults>
+    <passes>22</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Net::HTTP</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>22</totalresults>
+    <passes>22</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Net::FTP</module>
+    <depth>3</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>HTTP::Cookies</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>21</totalresults>
+    <passes>21</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>WWW::RobotRules</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>18</totalresults>
+    <passes>17</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>File::ShareDir::Install</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>40</totalresults>
+    <passes>40</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>MooseX::Types::Perl</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>33</totalresults>
+    <passes>33</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>DateTime</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>15</totalresults>
+    <passes>15</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>DateTime::Locale</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>33</totalresults>
+    <passes>32</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>DateTime::TimeZone</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>13</totalresults>
+    <passes>13</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>parent</module>
+    <depth>3</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Pod::Man</module>
+    <depth>3</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Class::Singleton</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>29</totalresults>
+    <passes>29</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Math::Round</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>28</totalresults>
+    <passes>28</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Pod::Eventual</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>36</totalresults>
+    <passes>36</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Mixin::Linewise::Readers</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>40</totalresults>
+    <passes>40</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>App::Cmd::Setup</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>20</totalresults>
+    <passes>19</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>IO::TieCombine</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>35</totalresults>
+    <passes>35</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>autobox</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>24</totalresults>
+    <passes>23</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Software::License</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>17</totalresults>
+    <passes>17</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Text::Template</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>33</totalresults>
+    <passes>33</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Archive::Tar</module>
+    <depth>1</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>ExtUtils::Manifest</module>
+    <depth>1</depth>
+    <warning />
+    <textresult>Core module</textresult>
+    <ispureperl>?</ispureperl>
+    <totalresults>0</totalresults>
+  </dependency>
+
+  <dependency>
+    <module>Config::MVP::Reader::INI</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>36</totalresults>
+    <passes>36</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Config::INI::Reader</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>40</totalresults>
+    <passes>40</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Moose::Autobox</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>34</totalresults>
+    <passes>34</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Perl6::Junction</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>30</totalresults>
+    <passes>30</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Hash::Merge::Simple</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>33</totalresults>
+    <passes>33</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Test::Most</module>
+    <depth>2</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>36</totalresults>
+    <passes>35</passes>
+    <fails>0</fails>
+    <unknowns>1</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Exception::Class</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>38</totalresults>
+    <passes>38</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Class::Data::Inheritable</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>40</totalresults>
+    <passes>40</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Test::Warn</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>32</totalresults>
+    <passes>32</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Tree::DAG_Node</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>38</totalresults>
+    <passes>38</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Test::Differences</module>
+    <depth>3</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>19</totalresults>
+    <passes>19</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Text::Diff</module>
+    <depth>4</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>21</totalresults>
+    <passes>21</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>Algorithm::Diff</module>
+    <depth>5</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>30</totalresults>
+    <passes>30</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>File::Copy::Recursive</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>7</totalresults>
+    <passes>7</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <dependency>
+    <module>File::ShareDir</module>
+    <depth>1</depth>
+    <warning />
+    <textresult />
+    <ispureperl>?</ispureperl>
+    <totalresults>36</totalresults>
+    <passes>36</passes>
+    <fails>0</fails>
+    <unknowns>0</unknowns>
+    <nas>0</nas>
+  </dependency>
+
+  <chanceofsuccess>91%</chanceofsuccess>
+
+  <debug />
+</cpandeps>
